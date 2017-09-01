@@ -1,0 +1,24 @@
+Package: climateInfo
+Type: Package
+Title: Information from netCDF4 files with climate data
+Version: 0.1.0
+Author: C.Natemeyer
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Implementation of functions that extract a required regional area and
+    time period from input data file. Then on this subset functions are performed 
+    to compute some simple time series and statistics (e.g. regional annual means;
+    trend under linear model).Plots of these statistics are saved in a folder
+    which is created after user is asked to enter a directory. Naming convention 
+    of folder 'var.project_id.model_id.timeperiod.region'.    Purpose of this 
+    package is to get an overview over a specific datamodel in form of plots. User 
+    will be asked if he/she wishes to write data in csv fomat and save it in same 
+    folder.     Note: Package  only applicable on data with a lon/lat
+    coordinate reference system on regular grid and  one level of observation. If 
+    there is more than one level of observations, functions are performed only on lev 1.  The
+    data must be of either monthly or daily observations. The package is expandable 
+    and functions for other types of data can be added easily.
+Depends: raster
+Imports: maps, ncdf4
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
